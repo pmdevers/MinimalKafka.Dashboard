@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{339EC62A-ABA7-46A4-9FA3-245C5A25829C}"
+	ProjectSection(SolutionItems) = preProject
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Packages.props = src\Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{A65A8E6B-12C8-491C-948B-C97C63DFCC04}"
+	ProjectSection(SolutionItems) = preProject
+		test\Directory.Build.props = test\Directory.Build.props
+		test\Directory.Packages.props = test\Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{374809BC-A96D-4EF2-9EF4-F85E169B1123}"
+	ProjectSection(SolutionItems) = preProject
+		docs\getting-started.md = docs\getting-started.md
+		docs\introduction.md = docs\introduction.md
+		docs\toc.yml = docs\toc.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalKafka.Dashboard", "src\MinimalKafka.Dashboard\MinimalKafka.Dashboard.csproj", "{AFD3A96A-0A69-4E13-8DE2-2C873A2D67DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalKafka.Dashboard.Tests", "test\MinimalKafka.Dashboard.Tests\MinimalKafka.Dashboard.Tests.csproj", "{C8E9729E-EE9A-4D26-8961-CB20C685913F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{353B80E2-6DE0-453F-9C14-93C9024B89E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDashboard", "examples\SimpleDashboard\SimpleDashboard.csproj", "{D3B1D8AB-D6A3-4EB2-8B39-E2EF830FC38C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFD3A96A-0A69-4E13-8DE2-2C873A2D67DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFD3A96A-0A69-4E13-8DE2-2C873A2D67DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFD3A96A-0A69-4E13-8DE2-2C873A2D67DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFD3A96A-0A69-4E13-8DE2-2C873A2D67DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8E9729E-EE9A-4D26-8961-CB20C685913F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8E9729E-EE9A-4D26-8961-CB20C685913F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8E9729E-EE9A-4D26-8961-CB20C685913F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8E9729E-EE9A-4D26-8961-CB20C685913F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3B1D8AB-D6A3-4EB2-8B39-E2EF830FC38C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3B1D8AB-D6A3-4EB2-8B39-E2EF830FC38C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3B1D8AB-D6A3-4EB2-8B39-E2EF830FC38C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3B1D8AB-D6A3-4EB2-8B39-E2EF830FC38C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AFD3A96A-0A69-4E13-8DE2-2C873A2D67DF} = {339EC62A-ABA7-46A4-9FA3-245C5A25829C}
+		{C8E9729E-EE9A-4D26-8961-CB20C685913F} = {A65A8E6B-12C8-491C-948B-C97C63DFCC04}
+		{D3B1D8AB-D6A3-4EB2-8B39-E2EF830FC38C} = {353B80E2-6DE0-453F-9C14-93C9024B89E8}
+	EndGlobalSection
+EndGlobal
