@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using MinimalKafka.Dashboard;
+using MinimalKafka.Dashboard.Gen;
 
 namespace MinimalKafka;
 
@@ -13,6 +14,8 @@ public static class MinimalKafkaDashboardExtensions
         options?.Invoke(o);
 
         builder.Services.AddSingleton(o);
+        builder.Services.AddSingleton<IDashboardrInfoProvider, DashboardInfoGenerator>();
+
 
         return builder;
     }
