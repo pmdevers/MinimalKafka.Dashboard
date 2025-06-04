@@ -6,10 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMinimalKafka(options =>
     {
         options.WithConfiguration(builder.Configuration.GetSection("Kafka"));
-        options.WithDashboard(dashboardOptions =>
-        {
-            dashboardOptions.DashboardPath = "/kafka-dashboard"; // Set the path for the dashboard
-        });
+        options.WithDashboard();
     });
     
 

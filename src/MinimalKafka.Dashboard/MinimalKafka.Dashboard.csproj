@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" />
     <PackageReference Include="MinimalKafka" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Api\" />
+	<EmbeddedResource Include="Ui/dist/*.*" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Folder Include="UI\" />
   </ItemGroup>
 
 </Project>
