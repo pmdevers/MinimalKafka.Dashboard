@@ -28,5 +28,19 @@ export default defineConfig({
         assetFileNames: '[name].[ext]'
       }
     }
-  }
+  },
+  server: {
+    proxy: {
+      '/[RoutePrefix]/dashboard.json': {
+        target: 'http://localhost:5253/',
+        changeOrigin: true,
+        rewrite: (path) => {
+          console.log(path) 
+          var result = path.replace("[RoutePrefix]", 'kafka-dashboard')
+          console.log(result);
+          return result;
+        }
+      },
+    },
+  },
 })

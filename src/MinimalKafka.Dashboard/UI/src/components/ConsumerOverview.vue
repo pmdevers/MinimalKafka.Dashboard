@@ -8,6 +8,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+
+import { data } from "@/store";
+
 </script>
 
 <template>
@@ -19,24 +22,24 @@ import {
         <TableHeader>
         <TableRow>
             <TableHead class="w-[100px]">
-            Invoice
+            Topic Name
             </TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead class="text-right">
-            Amount
-            </TableHead>
+            <TableHead>Client Id</TableHead>
+            <TableHead>Group Id</TableHead>
+            <TableHead class="text-right">Key Type</TableHead>
+            <TableHead class="text-right">Value Type</TableHead>
         </TableRow>
         </TableHeader>
         <TableBody>
-        <TableRow>
-            <TableCell class="font-medium">
-            INV001
-            </TableCell>
-            <TableCell>Paid</TableCell>
-            <TableCell>Credit Card</TableCell>
+        <TableRow v-for="(item, index) in data?.consumers" :key="index">
+            <TableCell class="font-medium">{{ item.topicName }}</TableCell>
+            <TableCell>{{ item.clientId }}</TableCell>
+            <TableCell>{{ item.groupId }}</TableCell>
             <TableCell class="text-right">
-            $250.00
+              {{ item.keyType }}
+            </TableCell>
+            <TableCell class="text-right">
+              {{ item.valueType }}
             </TableCell>
         </TableRow>
         </TableBody>
